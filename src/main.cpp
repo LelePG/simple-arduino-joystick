@@ -28,29 +28,30 @@ void loop() {
   leituraX = map(analogRead(eixoX), 0, 1023, -1, 2);
   leituraY = map(analogRead(eixoY), 0, 1023, -1, 2);
 
- // movimentaX(leituraX);
- // movimentaY(leituraY);
+  movimentaX(leituraX);
+  movimentaY(leituraY);
+ 
   if(digitalRead(btn1)){
-  /* Keyboard.press('n');
+   Keyboard.press('n');
    delay(50);
-   Keyboard.release('n');*/
-   Serial.println("A");
+   Keyboard.release('n');
+   //Serial.println("A");//Debug
   }
   else if(digitalRead(btn2)){
-   /*Keyboard.press('v');
+   Keyboard.press('v');
    delay(50);
-   Keyboard.release('v');*/
-   Serial.println("B");
+   Keyboard.release('v');
+   //Serial.println("B");//Debug
   }
   else if(digitalRead(btn3)){
-  /* Keyboard.press(' ');
+   Keyboard.press(' ');
    delay(50);
-   Keyboard.release(' ');*/
-   Serial.println("C");
+   Keyboard.release(' ');
+   //Serial.println("C");//Debug
   }
   else if(digitalRead(btn4)){
-   // Keyboard.write(KEY_ESC);
-   Serial.println("d");
+   Keyboard.write(KEY_ESC);
+   //Serial.println("D");//Debug
   }
   delay(50);
 
@@ -83,6 +84,3 @@ void movimentaY(int leitura){
 }
 
 
-/*
-nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
-*/
